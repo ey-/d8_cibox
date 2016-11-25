@@ -1,0 +1,8 @@
+---
+#- include: drupal-composer.yml drupal_subfolder=web
+ # when:
+#    - cmf == "drupal" and composer_workflow
+
+- include: drupal.yml
+#  when:
+#    - cmf == "drupal" and not composer_workflow
