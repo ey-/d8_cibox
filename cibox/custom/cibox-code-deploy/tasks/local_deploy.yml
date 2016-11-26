@@ -4,6 +4,8 @@
 
 - name: Make sure vendors are installed
   shell: "composer install --prefer-dist"
+  args:
+    chdir: '{{ workspace }}'
 
 - name: Copy files to project directory
   synchronize:
