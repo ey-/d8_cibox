@@ -7,7 +7,7 @@
 
 - name: Copy files to project directory
   synchronize:
-    src: {{ source }}/
+    src: '{{ source }}/'
     dest: '{{ destination }}'
 
 - name: Folder permissions
