@@ -2,8 +2,15 @@
 - name: Generate commentinfo.md file
   shell: 'echo "===============" > {{ workspace }}/commentinfo.md'
 
-- name: Sync files into docroot
-  shell: "mv {{ source }}/ {{ destination }}"
+- name: Make sure vendors are installed
+  shell: "composer install --prefer-dist"
+  args:
+    chdir: '{{ source }}'
+
+- name: Copy files to project directory
+  synchronize:
+    src: '{{ source }}/'
+    dest: '{{ destination }}'
 
 - name: Folder permissions
   shell: "sudo chown -R www-data:jenkins {{ destination }}"
