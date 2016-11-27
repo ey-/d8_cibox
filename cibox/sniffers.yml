@@ -16,18 +16,18 @@
     scan_security: false
     phpcs_extensions: php,inc,install,module
     phpcs_features_extensions: module
-    custom_modules_path: {{ webroot_dir }}/modules/custom/
-    custom_themes_path: {{ webroot_dir }}/themes/custom
-    features_path: {{ webroot_dir }}/modules/features
+    custom_modules_path: "{{ webroot_dir }}/modules/custom/"
+    custom_themes_path: "{{ webroot_dir }}/themes/custom"
+    features_path: "{{ webroot_dir }}/modules/features"
     phpcs_modules_ignore:
-      - {{ webroot_dir }}/themes/custom/nonstandard
+      - "{{ webroot_dir }}/themes/custom/nonstandard"
     phpcs_features_ignore:
-      - {{ webroot_dir }}/modules/features/nonstandard
+      - "{{ webroot_dir }}/modules/features/nonstandard"
     phpcs_features_ignore_path: modules/features,*.pages_default.inc,*.panelizer.inc,*.features.menu_custom.inc,*.features.webform.inc,*.features.filter.inc,*.strongarm.inc,*.fpp_content_declarations.inc,*.panels_default.inc
     composer_dir: /usr/share/composer
     phpcs_bin: /usr/bin/phpcs
     build_report_path: build_reports
-    build_reports_dir: {{ webroot_dir }}/{{ build_report_path }}
+    build_reports_dir: "{{ webroot_dir }}/{{ build_report_path }}"
 
     composer_global_require:
       - squizlabs/php_codesniffer=dev-master
