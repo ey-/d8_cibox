@@ -20,7 +20,7 @@
 
   tasks:
     - name: Export config
-      shell: drush config-export staging -y --skip-modules=devel,config_devel,stage_file_proxy
+      shell: drush -r ../docroot config-export staging -y --skip-modules=devel,config_devel,stage_file_proxy
 
     - name: Remove excluded config files
       file:
