@@ -40,4 +40,5 @@ dependencies:
   - views_ui
 themes:
   - stark
+  - bartik
 
